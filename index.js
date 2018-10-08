@@ -6,15 +6,15 @@ const app = express();
 
 const schema = `
 type Hamburger {
-	burger: String
-	bun: String
-	onions: String
+  burger: String
+  bun: String
+  onions: String
   lettuce: String
   cheese: String
 }
 
 type Query {
-	orderHamburger(cheese: String, type: String): Hamburger
+  orderHamburger(cheese: String, type: String): Hamburger
 }
 `;
 
@@ -25,10 +25,7 @@ const resolvers = {
     orderHamburger: (root, params, request) => {
       const burgerRecipe = BURGERS[params.type || 'american'];
 
-      return Object.assign(
-        burgerRecipe,
-        params.cheese && { cheese: params.cheese }
-      );
+      return Object.assign(burgerRecipe, params.cheese && { cheese: params.cheese });
     },
   },
 };
