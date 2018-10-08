@@ -1,0 +1,16 @@
+{
+  "american": {
+    "burger": "beef",
+    "bun": "sesame seed",
+    "onions": "white",
+    "lettuce": "iceberg",
+    "cheese": "american"
+  },
+  "portobello": {
+    "burger": "portobello",
+    "bun": "sourdough",
+    "onions": "red",
+    "lettuce": null,
+    "cheese": "swiss"
+  }
+}
